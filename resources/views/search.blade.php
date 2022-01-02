@@ -11,7 +11,7 @@
 <body>
     <div class="text-center mt-5">
         <button type="button" class="btn btn-primary " data-mdb-ripple-color="dark">
-            HOME
+            SEARCH
         </button>
     </div>
     <script src="{{asset('js/mdb.min.js')}}"></script>
