@@ -113,22 +113,22 @@
                     <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-lg-5">
 
                         <!--Form with header-->
-                        <form class="card wow fadeIn" data-wow-delay="0.3s" action="/home">
+                        <form class="card wow fadeIn" method="post" data-wow-delay="0.3s" action="/dologin/store">
                             <div class="card-body">
-
                                 <!--Header-->
                                 <div class="form-header purple-gradient">
                                     <h3><i class="fas fa-user mt-2 mb-2"></i> Log in:</h3>
                                 </div>
 
                                 <!--Body-->
+                                @include('alert')
                                 <div class="md-form">
                                     <i class="fas fa-user prefix white-text"></i>
-                                    <input type="text" id="orangeForm-name" class="form-control">
+                                    <input type="text" name="name" id="orangeForm-name" class="form-control">
                                 </div>
                                 <div class="md-form">
                                     <i class="fas fa-lock prefix white-text"></i>
-                                    <input type="password" id="orangeForm-pass" class="form-control">
+                                    <input type="password" name="password" id="orangeForm-pass" class="form-control">
                                 </div>
 
                                 <div class="text-center">
@@ -140,8 +140,8 @@
                                         <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
                                     </div>
                                 </div>
-
                             </div>
+                            @csrf
                         </form>
                         <!--/Form with header-->
 

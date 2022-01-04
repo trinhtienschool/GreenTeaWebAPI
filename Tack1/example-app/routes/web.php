@@ -22,9 +22,7 @@ Route::get('/dosignup', function () {
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/home', function () {
-    return view('index');
-});
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/signup', [LoginController::class, 'store']);
+Route::get('/home',)->name('home');
+Route::get('/dologin', [LoginController::class, 'index']);
+Route::post('/dologin/store', [LoginController::class, 'store']);
 
