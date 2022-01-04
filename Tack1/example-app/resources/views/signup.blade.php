@@ -11,21 +11,21 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
+  <link href="{{asset('css/mdb.min.css')}}" rel="stylesheet">
 
   <style>
 
-    html,
+html,
     body,
     header,
     .view {
-      height: 100%;
-    }
+    height: 100%;
+}
 
     @media (min-width: 851px) and (max-width: 1440px) {
-      html,
+    html,
       body,
       header,
       .view {
@@ -34,7 +34,7 @@
     }
 
     @media (min-width: 800px) and (max-width: 850px) {
-      html,
+    html,
       body,
       header,
       .view {
@@ -43,7 +43,7 @@
     }
 
     @media (min-width: 451px) and (max-width: 740px) {
-      html,
+    html,
       body,
       header,
       .view {
@@ -52,7 +52,7 @@
     }
 
     @media (max-width: 450px) {
-      html,
+    html,
       body,
       header,
       .view {
@@ -61,41 +61,35 @@
     }
 
     .intro-2 {
-      background: url("https://mdbootstrap.com/img/Photos/Others/forest1.jpg")no-repeat center center;
+    background: url("https://mdbootstrap.com/img/Photos/Others/forest1.jpg")no-repeat center center;
       background-size: cover;
     }
 
     .top-nav-collapse {
-      background-color: #3f51b5 !important;
+    background-color: #3f51b5 !important;
     }
 
     .navbar:not(.top-nav-collapse) {
-      background: transparent !important;
+    background: transparent !important;
     }
 
     @media (max-width: 768px) {
-      .navbar:not(.top-nav-collapse) {
+    .navbar:not(.top-nav-collapse) {
         background: #3f51b5 !important;
-      }
+    }
     }
     @media (min-width: 800px) and (max-width: 850px) {
-        .navbar:not(.top-nav-collapse) {
-            background: #3f51b5!important;
-        }
+    .navbar:not(.top-nav-collapse) {
+        background: #3f51b5!important;
     }
-
-    .rgba-gradient {
-      background: -webkit-linear-gradient(98deg, rgba(22, 91, 231, 0.5), rgba(255, 32, 32, 0.5) 100%);
-      background: -webkit-gradient(linear, 98deg, from(rgba(22, 91, 231, 0.5)), to(rgba(255, 32, 32, 0.5)));
-      background: linear-gradient(to 98deg, rgba(22, 91, 231, 0.5), rgba(255, 32, 32, 0.5) 100%);
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
     }
 
     h6 {
-      line-height: 1.7;
+    line-height: 1.7;
     }
   </style>
 
@@ -106,39 +100,7 @@
   <!--Main Navigation-->
   <header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <strong>MDB</strong>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-          </ul>
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
+  @include('layout.nav')
 
     <!--Intro Section-->
     <section class="view intro-2">
@@ -300,9 +262,9 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../js/mdb.min.js"></script>
   <script>
-    $(document).ready(() => {
-      new WOW().init();
-    });
+$(document).ready(() => {
+    new WOW().init();
+});
   </script>
 </body>
 
