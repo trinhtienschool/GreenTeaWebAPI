@@ -150,35 +150,35 @@
                   </div>
 
                   <!--Body-->
-              <form method="post" action="/didlogin">
+              <form method="post" action="/didlogin" >
                   @csrf
+                  <!-- start nếu xảy ra lỗi thì hiện thông báo: -->
+                  <?php if(isset($_COOKIE["error"])){ ?>
+                  <div class="alert alert-danger">
+                      <strong>Error!</strong> <?php echo $_COOKIE["error"]; ?>
+                  </div>
+                  <?php } ?>
+              <!-- end nếu xảy ra lỗi thì hiện thông báo: -->
                   <div class="md-form">
                     <i class="fas fa-user prefix white-text"></i>
-                    <input type="text" id="orangeForm-name" class="form-control">
-                    <label for="orangeForm-name">Your name</label>
-                  </div>
-                  <div class="md-form">
-                    <i class="fas fa-envelope prefix white-text"></i>
-                    <input type="text" id="orangeForm-email" class="form-control">
-                    <label for="orangeForm-email">Your email</label>
+                    <input type="text" id="username" class="form-control" name="username">
+                    <label for="username">Your name</label>
                   </div>
 
                   <div class="md-form">
                     <i class="fas fa-lock prefix white-text"></i>
-                    <input type="password" id="orangeForm-pass" class="form-control">
-                    <label for="orangeForm-pass">Your password</label>
+                    <input type="password" id="password" class="form-control" name="password">
+                    <label for="password">Your password</label>
+                  </div>
+                      <div class="text-center">
+                          <button class="btn purple-gradient btn-lg">Sign In</button>
+
+                      </div>
+              </form>
+                  <div class="text-center">
+                      <button class="btn purple-gradient btn-lg" onclick="document.location.href='http://localhost:80/doRegister'">Sign Up</button>
                   </div>
 
-                  <div class="text-center">
-                    <button class="btn purple-gradient btn-lg">Sign up</button>
-                    <hr>
-                    <div class="inline-ul text-center d-flex justify-content-center">
-                      <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a>
-                      <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"> </i></a>
-                      <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
-                    </div>
-                  </div>
-              </form>
                 </div>
               </div>
               <!--/Form with header-->
@@ -195,13 +195,13 @@
 
   <!--  SCRIPTS  -->
   <!-- JQuery -->
-  <script type="text/javascript" src={{asset("js/jquery.js/jquery.min.js")}}></script>
+  <script type="text/javascript" src="{{asset("js/jquery.js/jquery.min.js")}}"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src={{asset("js/popper.js/popper.min.js")}}></script>
+  <script type="text/javascript" src='{{asset("js/popper.js/popper.min.js")}}'></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src={{asset("js/bootstrap.js/bootstrap.min.js")}}></script>
+  <script type="text/javascript" src='{{asset("js/bootstrap.js/bootstrap.min.js")}}'></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src={{asset("js/mdb.js/mdb.min.js")}}></script>
+  <script type="text/javascript" src='{{asset("js/mdb.js/mdb.min.js")}}'></script>
   <script>
     $(document).ready(() => {
       new WOW().init();
